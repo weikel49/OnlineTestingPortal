@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Class Roster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+  
+    label {
+      font-weight: bold;
+    }
+  
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  
+    button {
+      padding: 10px 16px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .submit-button {
+      padding: 10px 16px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer; 
+    }
+
+    .back-link-button {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .back-link-button button {
+        max-width: 600px;
+        background-color: #007BFF;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-block;
+    }
+  
+    .student-inputs input {
+      margin-bottom: 10px;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+  
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  
+    .credentials {
+      max-width: 800px;
+    }
+  </style>  
+</head>
+<body>
+  <h2>Manage Class Roster</h2>
+
+  <form id="rosterForm">
+    <label>Class Name:</label><br/>
+    <input type="text" id="className" required /><br/><br/>
+
+    <label>Student Names:</label><br/>
+    <div id="studentList" class="student-inputs">
+      <input type="text" name="student" placeholder="Student Full Name" required />
+    </div>
+    <button type="button" onclick="addStudentField()">+ Add another student</button><br/><br/>
+
+    <button class = "submit-button" type="submit">Submit Roster</button>
+    <div class="back-link-button">
+      <button type="button" onclick="location.href='class_roster_summary.html'">← Return to Roster Summary</a>
+    </div>
+  </form>
+
+  <div class="credentials" id="results" style="display: none;">
+    <h3>Generated Student Credentials</h3>
+    <table id="outputTable" border = "1" cellpadding="8" style="border-collapse: collapse; margin-top: 10px;">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      
+  </div>
+  
+
+  <script>
+    function addStudentField() {
+      const div = document.createElement('div');
+      div.innerHTML = '<input type="text" name="student" placeholder="Student Full Name" required />';
+      document.getElementById('studentList').appendChild(div);
+    }
+
+    document.getElementById('rosterForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const className = document.getElementById('className').value;
+      const studentInputs = document.querySelectorAll('input[name="student"]');
+      const students = Array.from(studentInputs).map(input => input.value.trim()).filter(name => name);
+
+      if (students.length === 0) {
+        alert("Please enter at least one student.");
+        return;
+      }
+
+      const payload = { className, students };
+
+      const response = await fetch('/OnlineTestingPortal/manage-class-roster', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        document.getElementById('results').style.display = 'block';
+
+        const table = document.getElementById('outputTable').querySelector('tbody');
+        table.innerHTML = '';
+
+        result.students.forEach(student => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${student.fullName}</td>
+                <td>${student.username}</td>
+                <td>${student.password}</td>
+            `;
+            table.appendChild(row);
+        });
+      } else {
+        alert('❌ Failed to save class roster');
+      }
+    });
+  </script>
+</body>
+</html>

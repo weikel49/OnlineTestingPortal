@@ -1,0 +1,369 @@
+11-May-2025 11:46:29.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 11:46:29.102 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 11:46:29.102 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 11:46:29.102 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 11:46:29.102 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:46:29.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 11:46:29.114 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:46:29.115 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 11:46:29.211 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 11:46:29.214 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 11:46:29.343 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 11:46:29.371 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [373] milliseconds
+11-May-2025 11:46:29.410 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 11:46:29.410 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 11:46:29.418 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 11:46:29.916 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 11:46:29.967 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [548] ms
+11-May-2025 11:46:29.967 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 11:46:30.124 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 11:46:30.126 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [159] ms
+11-May-2025 11:46:30.129 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 11:46:30.154 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [782] milliseconds
+11-May-2025 11:48:30.257 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 11:48:30.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 11:48:30.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:48:30.261 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 11:48:30.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 11:48:30.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 11:48:30.269 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 11:48:30.271 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 11:48:30.398 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 11:48:30.417 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [253] milliseconds
+11-May-2025 11:48:30.457 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 11:48:30.457 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 11:48:30.464 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 11:48:30.959 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 11:48:31.013 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [548] ms
+11-May-2025 11:48:31.013 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 11:48:31.164 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 11:48:31.166 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [153] ms
+11-May-2025 11:48:31.169 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 11:48:31.193 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [776] milliseconds
+11-May-2025 13:05:19.202 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 13:05:19.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 13:05:19.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:05:19.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:05:19.211 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 13:05:19.212 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 13:05:19.213 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:05:19.213 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:05:19.213 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 13:05:19.214 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 13:05:19.217 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 13:05:19.348 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 13:05:19.368 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [262] milliseconds
+11-May-2025 13:05:19.421 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 13:05:19.421 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 13:05:19.429 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 13:05:19.962 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 13:05:20.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [585] ms
+11-May-2025 13:05:20.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 13:05:20.172 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 13:05:20.174 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [160] ms
+11-May-2025 13:05:20.176 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 13:05:20.199 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [830] milliseconds
+11-May-2025 13:08:00.535 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 13:08:00.539 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 13:08:00.539 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:08:00.540 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:08:00.546 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 13:08:00.546 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 13:08:00.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:08:00.548 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 13:08:00.548 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 13:08:00.550 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 13:08:00.553 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 13:08:00.679 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 13:08:00.698 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [259] milliseconds
+11-May-2025 13:08:00.737 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 13:08:00.737 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 13:08:00.747 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 13:08:01.329 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 13:08:01.383 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [636] ms
+11-May-2025 13:08:01.384 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 13:08:01.576 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 13:08:01.579 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [195] ms
+11-May-2025 13:08:01.582 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 13:08:01.605 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [906] milliseconds
+11-May-2025 15:24:39.583 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 15:24:39.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 15:24:39.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 15:24:39.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 15:24:39.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 15:24:39.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 15:24:39.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 15:24:39.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 15:24:39.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 15:24:39.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:24:39.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:24:39.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 15:24:39.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 15:24:39.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 15:24:39.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:24:39.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 15:24:39.595 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 15:24:39.598 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 15:24:39.724 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 15:24:39.744 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [255] milliseconds
+11-May-2025 15:24:39.777 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 15:24:39.777 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 15:24:39.785 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 15:24:40.341 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 15:24:40.395 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [610] ms
+11-May-2025 15:24:40.395 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 15:24:40.575 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 15:24:40.577 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [182] ms
+11-May-2025 15:24:40.579 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 15:24:40.603 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [859] milliseconds
+11-May-2025 15:29:11.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 15:29:11.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 15:29:11.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 15:29:11.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 15:29:11.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:29:11.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 15:29:11.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 15:29:11.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 15:29:11.167 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 15:29:11.170 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 15:29:11.293 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 15:29:11.311 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [254] milliseconds
+11-May-2025 15:29:11.355 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 15:29:11.355 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 15:29:11.365 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 15:29:11.905 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 15:29:11.968 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [603] ms
+11-May-2025 15:29:11.968 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 15:29:12.148 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 15:29:12.150 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [182] ms
+11-May-2025 15:29:12.152 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 15:29:12.175 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [864] milliseconds
+11-May-2025 16:32:00.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 16:32:00.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 16:32:00.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:00.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:00.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 16:32:00.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 16:32:00.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 16:32:00.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 16:32:00.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:00.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 16:32:00.391 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 16:32:00.394 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 16:32:00.530 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 16:32:00.548 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [261] milliseconds
+11-May-2025 16:32:00.590 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 16:32:00.590 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 16:32:00.602 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 16:32:01.142 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 16:32:01.197 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [595] ms
+11-May-2025 16:32:01.197 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 16:32:01.375 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 16:32:01.377 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [180] ms
+11-May-2025 16:32:01.380 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-May-2025 16:32:01.403 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [855] milliseconds
+11-May-2025 16:32:57.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.40
+11-May-2025 16:32:57.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 1 2025 17:20:53 UTC
+11-May-2025 16:32:57.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.40.0
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\jdk-17
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.15+6
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+11-May-2025 16:32:57.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:57.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:57.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\conf\logging.properties
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-May-2025 16:32:57.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-May-2025 16:32:57.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-May-2025 16:32:57.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-May-2025 16:32:57.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:57.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat
+11-May-2025 16:32:57.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\temp
+11-May-2025 16:32:57.606 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-May-2025 16:32:57.609 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-May-2025 16:32:57.731 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-May-2025 16:32:57.744 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1051)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:522)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:957)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:712)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:240)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:195)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1317)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1049)
+		... 13 more
+11-May-2025 16:32:57.745 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [245] milliseconds
+11-May-2025 16:32:57.785 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-May-2025 16:32:57.785 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.40]
+11-May-2025 16:32:57.797 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal]
+11-May-2025 16:32:58.333 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 16:32:58.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\OnlineTestingPortal] has finished in [590] ms
+11-May-2025 16:32:58.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT]
+11-May-2025 16:32:58.568 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-May-2025 16:32:58.570 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\kmwei\Desktop\docs\CSU Global\CSC 480 CAPSTONE\Week 8, final project\OnlineTestingPortalPackage\OnlineTestingPortal\apache-tomcat\webapps\ROOT] has finished in [182] ms
+11-May-2025 16:32:58.573 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [826] milliseconds
+11-May-2025 16:32:58.576 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:533)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:851)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:799)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+11-May-2025 16:32:58.576 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+11-May-2025 16:32:58.576 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+11-May-2025 16:32:58.583 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [OnlineTestingPortal] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+11-May-2025 16:32:58.584 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [OnlineTestingPortal] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.15/java.lang.Object.wait(Native Method)
+ java.base@17.0.15/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+11-May-2025 16:32:58.585 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+11-May-2025 16:32:58.585 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

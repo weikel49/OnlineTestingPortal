@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Results Summary - Online Testing Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 12px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #noResults {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Test Results Summary</h2>
+        <label for="testSelect">Select Test:</label>
+        <select id="testSelect"></select>
+        <button class="button" onclick="loadResults()">View Results</button>
+
+        <table id="resultsTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Score</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+        </table>
+
+        <p id="noResults">No results available for this test.</p>
+
+        <button class="back-btn" onclick="window.location.href='teacher_dashboard.html'">← Return to Dashboard</button>
+    </div>
+
+    <script>
+        fetch('/OnlineTestingPortal/get-tests')
+            .then(res => res.json())
+            .then(data => {
+                const select = document.getElementById('testSelect');
+                data.forEach(test => {
+                    const option = document.createElement('option');
+                    option.value = test.id;
+                    option.textContent = test.title;
+                    select.appendChild(option);
+                });
+            });
+
+        function loadResults() {
+            const testId = document.getElementById('testSelect').value;
+            fetch(`/OnlineTestingPortal/test-results-summary?id=${testId}`)
+                .then(res => res.json())
+                .then(results => {
+                    const tbody = document.getElementById('resultsBody');
+                    const table = document.getElementById('resultsTable');
+                    const noResults = document.getElementById('noResults');
+
+                    tbody.innerHTML = '';
+
+                    if (results.length === 0) {
+                        table.style.display = 'none';
+                        noResults.style.display = 'block';
+                        return;
+                    }
+
+                    noResults.style.display = 'none';
+                    results.forEach(r => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${r.student}</td><td>${r.score}</td><td>${r.total}</td>`;
+                        tbody.appendChild(row);
+                    });
+
+                    table.style.display = 'table';
+                })
+                .catch(err => {
+                    console.error('❌ Error loading test results:', err);
+                    alert('❌ Failed to load test results.');
+                });
+        }
+    </script>
+</body>
+</html>

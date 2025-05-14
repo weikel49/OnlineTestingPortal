@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Take Test - Online Testing Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question-block {
+            background: #fff;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+
+        .question-block p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultMessage {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Take Your Test</h2>
+
+    <form id="testForm">
+        <div id="questionsContainer"></div>
+        <button type="submit">Submit Test</button>
+    </form>
+
+    <h3 id="timer">Time Remaining: </h3>
+
+    <div id="resultMessage"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const testId = urlParams.get('id');
+        let timerInterval = null;
+
+        if (!testId) {
+            document.getElementById('questionsContainer').innerHTML = "❌ No test ID provided.";
+        } else {
+            fetch(`/OnlineTestingPortal/view-test?id=${testId}`)
+                .then(res => res.json())
+                .then(test => {
+                    renderTest(test);
+                })
+                .catch(err => {
+                    console.error("Error loading test:", err);
+                    document.getElementById('questionsContainer').innerText = "❌ Failed to load test.";
+                });
+        }
+
+        function renderTest(test) {
+            const container = document.getElementById('questionsContainer');
+            container.innerHTML = '';
+
+            test.questions.forEach((q, i) => {
+                const options = Object.entries(q.options).map(([key, value]) => `
+                    <label>
+                        <input type="radio" name="q${i}" value="${value}"/>
+                        ${value}
+                    </label>
+                `).join('');
+
+                container.innerHTML += `
+                    <div class="question-block">
+                        <p>Q${i + 1}: ${q.questionText}</p>
+                        ${options}
+                    </div>
+                `;
+            });
+
+
+            document.getElementById('testForm').onsubmit = function(e) {
+                e.preventDefault();
+
+                const answers = [];
+                test.questions.forEach((q, i) => {
+                    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                    answers.push({
+                        questionId: q.id,
+                        selectedAnswer: selected ? selected.value : "",
+                        correctAnswer: q.correctAnswer
+                    });
+                });
+
+                fetch('/OnlineTestingPortal/submit-answers', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        testId: test.id,
+                        answers: answers
+                    })
+                })
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error("❌ Server responded with error status");
+                    }
+                    return res.text();
+                })
+
+                .then(() => {
+                    document.getElementById('resultMessage').innerText = "✅ Test submitted!";
+                    clearInterval(timerInterval);
+                    setTimeout(() => {
+                        window.location.href = `view_results.html?testId=${test.id}`;
+                    }, 1000);
+                })
+                .catch(err => {
+                    console.error("Error submitting test:", err);
+                    document.getElementById('resultMessage').innerText = "❌ Failed to submit test.";
+                });
+            };
+
+            if (test.durationMinutes && test.durationMinutes > 0) {
+                let timeLeft = test.durationMinutes * 60;
+                const timerElement = document.getElementById('timer');
+
+                timerInterval = setInterval(() => {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = ('0' + (timeLeft % 60)).slice(-2);
+                    timerElement.textContent = `Time Remaining: ${minutes}:${seconds}`;
+                    timeLeft--;
+
+                    if (timeLeft < 0) {
+                        clearInterval(timerInterval);
+                        alert("⏰ Time's up! Submitting your test...");
+                        document.getElementById('testForm').requestSubmit();
+                    }
+                }, 1000);
+            } else {
+                document.getElementById('timer').textContent = "No time limit.";
+            }
+        }
+    </script>
+</body>
+</html>

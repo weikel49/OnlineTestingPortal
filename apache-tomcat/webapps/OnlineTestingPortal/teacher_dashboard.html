@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Dashboard - Online Testing Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dashboard {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .button-group a {
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .button-group a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome, Teacher</h1>
+</header>
+
+<div class="dashboard">
+    <h2>Dashboard</h2>
+    <div class="button-group">
+        <a href="create_test.html">Create New Test</a>
+        <a href="results_summary.html">View Student Results</a>
+        <a href="class_roster_summary.html">Manage Class Roster</a>
+        <a href="view_tests.html">View Created Tests</a>
+        <a href="logout">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

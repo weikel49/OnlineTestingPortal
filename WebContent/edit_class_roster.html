@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class Roster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .back {
+      margin-top: 20px;
+    }
+
+    .back button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="classTitle">Class Roster</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody id="rosterTable">
+      <!-- Filled by script -->
+    </tbody>
+  </table>
+  <div style="margin-top: 20px;">
+    <button onclick="addStudent()">+ Add Student</button>
+  </div>
+  
+  <div style="margin-top: 20px;">
+    <button onclick="saveChanges()">💾 Save Changes</button>
+  </div>
+  
+
+  <div class="back">
+    <button onclick="window.history.back()">← Return to Class Summary</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const classId = urlParams.get('classId');
+
+    let students = [];
+
+    async function fetchRoster() {
+      const res = await fetch(`/OnlineTestingPortal/get-class-roster?classId=${classId}`);
+      const data = await res.json();
+
+      document.getElementById("classTitle").textContent = `Class: ${data.className}`;
+      students = data.students;
+      renderTable();
+    }
+
+    function removeStudent(index) {
+        students.splice(index, 1);
+        renderTable();
+    }
+    function addStudent() {
+        const newStudent = { fullName: "", isNew: true};
+        students.push(newStudent);
+        renderTable();
+    }
+
+
+    async function saveChanges() {
+        const res = await fetch('/OnlineTestingPortal/update-class-roster', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ classId, students })
+        });
+
+        if (res.ok) {
+            alert("Roster updated successfully.");
+            location.href = "class_roster_summary.html";
+        } else {
+            alert("Failed to update roster.");
+        }
+    }
+
+    function renderTable() {
+        const tbody = document.getElementById("rosterTable");
+        tbody.innerHTML = "";
+        students.forEach((s, i) => {
+            const row = document.createElement("tr");
+            if (s.isNew) {
+                row.innerHTML = `
+                    <td><input value="${s.fullName}" onchange="students[${i}].fullName = this.value"></td>
+                    <td colspan="2" style="color: #888; font-style: italic;">(will generate login info)</td>
+                    <td><button onclick="removeStudent(${i})">Remove</button></td>
+                `;
+                } else {
+                row.innerHTML = `
+                    <td><input value="${s.fullName}" onchange="students[${i}].fullName = this.value"></td>
+                    <td><input value="${s.username}" onchange="students[${i}].username = this.value"></td>
+                    <td><input value="${s.password}" onchange="students[${i}].password = this.value"></td>
+                    <td><button onclick="removeStudent(${i})">Remove</button></td>
+                `;
+            }
+            tbody.appendChild(row);
+        });
+    }
+
+    fetchRoster();
+  </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Test - Online Testing Portal</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+            padding: 30px; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 8px rgba(0,0,0,0.1); 
+        }
+
+        h2 { 
+            text-align: center; 
+        }
+
+        .question-block { 
+            margin-bottom: 30px; 
+            padding: 15px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+        }
+
+        label { 
+            display: block; 
+            margin-top: 10px; 
+            font-weight: bold; 
+        }
+
+        input[type="text"], select { 
+            width: 95%; 
+            padding: 8px; 
+            margin-top: 5px; 
+            border-radius: 4px;
+            border: 1px solid #ccc; 
+        }
+
+        .title-input[type="text"], select { 
+            width: 93.2%; 
+            padding: 8px; 
+            margin-bottom: 8px; 
+            border-radius: 4px; 
+            border: 1px solid #ccc; 
+        }
+
+        button { 
+            margin-top: 20px; 
+            padding: 12px 18px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+        }
+
+        select {
+            width: 97.1%; 
+            padding: 8px; 
+            margin-top: 5px; 
+            border-radius: 4px; 
+            border: 1px solid #ccc;
+        }
+
+        .add-btn { 
+            background-color: #007BFF; 
+            color: white; 
+        }
+
+        .add-btn:hover{
+            background-color: #0056b3;
+        }
+
+        .submit-btn { 
+            background-color: #19A019; 
+            color: white; 
+        }
+
+        .submit-btn:hover {
+            background-color: #008000;
+        }
+
+        .back-link-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link-button button {
+            max-width: 600px;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .back-link-button button:hover{
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Create a New Test</h2>
+    <label for="testTitle">Test Title:</label>
+    <input type="text" class="title-input" id="testTitle" placeholder="Required" required>
+
+    <label for="testDuration">Test Duration (minutes):</label>
+    <input type="number" id="testDuration" name="duration_minutes" min="1"  required>
+
+
+    <div id="questionsContainer">
+    </div>
+
+    <button type="button" class="add-btn" onclick="addQuestion()">+ Add Question</button>
+    <button type="button" class="submit-btn" onclick="submitTest()">Submit Test</button>
+
+    <div class="back-link-button">
+        <button onclick="location.href='teacher_dashboard.html'">← Return to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    let questionCount = 0;
+
+    function addQuestion() {
+        const container = document.getElementById('questionsContainer');
+
+        const block = document.createElement('div');
+        block.classList.add('question-block');
+        block.innerHTML = `
+            <label>Question ${questionCount + 1}</label>
+            <input type="text" name="questionText" placeholder="Enter question text" required>
+            <label>Option 1:</label><input type="text" name="option1" required>
+            <label>Option 2:</label><input type="text" name="option2" required>
+            <label>Option 3:</label><input type="text" name="option3">
+            <label>Option 4:</label><input type="text" name="option4">
+            <label>Correct Answer:</label>
+            <select name="correctAnswer" required>
+                <option value="">-- Select Correct Option --</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        `;
+        container.appendChild(block);
+        questionCount++;
+    }
+
+    function submitTest() {
+        const title = document.getElementById('testTitle').value.trim();
+        const questionBlocks = document.querySelectorAll('.question-block');
+        const questions = [];
+        const duration = parseInt(document.getElementById('testDuration').value);
+
+        if (!title.trim()) {
+            alert("❌ Test must have a title.");
+            return;
+        }        
+
+        questionBlocks.forEach(block => {
+            const questionText = block.querySelector('input[name="questionText"]').value;
+
+            const options = {
+                option1: block.querySelector('input[name="option1"]').value,
+                option2: block.querySelector('input[name="option2"]').value,
+                option3: block.querySelector('input[name="option3"]').value,
+                option4: block.querySelector('input[name="option4"]').value
+            };
+
+            const correct = block.querySelector('select[name="correctAnswer"]').value;
+
+            questions.push({
+                questionText,
+                options: options,
+                correctAnswer: correct
+            });
+        });
+
+        const payload = {
+            title,
+            durationMinutes: duration,
+            questions
+        };
+
+        fetch('/OnlineTestingPortal/submit-test', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(res => {
+            if (res.ok) {
+                const msg = document.getElementById("successMessage");
+                msg.style.display = "block";
+
+                setTimeout(() => {
+                    window.location.href = "teacher_dashboard.html";
+                }, 2500);
+            } else {
+                alert("❌ Error saving test.");
+                const msg = document.getElementById("failMessage");
+                msg.style.display = "block";
+            }
+        })
+        .catch(err => {
+            console.error("Error:", err);
+            alert("❌ Something went wrong while submitting the test.");
+        });
+    }
+
+    window.onload = addQuestion;
+</script>
+<div id="successMessage" style="display:none; text-align:center; margin-top:20px; font-size:18px; color:green;">
+    ✅ Test saved successfully! Redirecting...
+</div>
+
+<div id="failMessage" style="display:none; text-align:center; margin-top:20px; font-size:18px; color:green;">
+    ❌ Error saving test.
+</div>
+
+</body>
+</html>

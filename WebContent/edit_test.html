@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .question-block {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"], select {
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        #test-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link-button {
+            margin-top: 20px;
+        }
+
+        .back-link-button button {
+            max-width: 600px;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .back-link-button button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+    <script>
+        let questions = [];
+
+        function renderQuestions() {
+            const container = document.getElementById("questions-container");
+            container.innerHTML = "";
+
+            questions.forEach((q, index) => {
+                const div = document.createElement("div");
+                div.className = "question-block";
+                div.innerHTML = `
+                    <h3>Question ${index + 1}</h3>
+                    <input type="text" placeholder="Question Text" value="${q.questionText}" onchange="updateQuestion(${index}, 'questionText', this.value)">
+                    <input type="text" placeholder="Option 1" value="${q.options.option1 || ''}" onchange="updateOption(${index}, 'option1', this.value)">
+                    <input type="text" placeholder="Option 2" value="${q.options.option2 || ''}" onchange="updateOption(${index}, 'option2', this.value)">
+                    <input type="text" placeholder="Option 3" value="${q.options.option3 || ''}" onchange="updateOption(${index}, 'option3', this.value)">
+                    <input type="text" placeholder="Option 4" value="${q.options.option4 || ''}" onchange="updateOption(${index}, 'option4', this.value)">
+                    <label>Correct Answer:</label>
+                    <select onchange="updateQuestion(${index}, 'correctAnswer', this.value)">
+                        <option value="${q.options.option1 || ''}" ${q.correctAnswer === q.options.option1 ? "selected" : ""}>${q.options.option1}</option>
+                        <option value="${q.options.option2 || ''}" ${q.correctAnswer === q.options.option2 ? "selected" : ""}>${q.options.option2}</option>
+                        <option value="${q.options.option3 || ''}" ${q.correctAnswer === q.options.option3 ? "selected" : ""}>${q.options.option3}</option>
+                        <option value="${q.options.option4 || ''}" ${q.correctAnswer === q.options.option4 ? "selected" : ""}>${q.options.option4}</option>
+                    </select>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function updateQuestion(index, field, value) {
+            questions[index][field] = value;
+        }
+
+        function updateOption(qIndex, key, value) {
+            questions[qIndex].options[key] = value;
+            renderQuestions();
+        }
+
+        function submitTest() {
+            const test = {
+                id: parseInt(new URLSearchParams(window.location.search).get("id")),
+                title: document.getElementById("test-title").value,
+                questions: questions
+            };
+
+            fetch("/OnlineTestingPortal/edit-test", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(test)
+            }).then(res => {
+                if (res.ok) {
+                    alert("✅ Test updated successfully!");
+                    window.location.href = "teacher_dashboard.html";
+                } else {
+                    alert("❌ Failed to update test.");
+                }
+            });
+        }
+
+        window.onload = () => {
+            const id = new URLSearchParams(window.location.search).get("id");
+            fetch(`/OnlineTestingPortal/edit-test?id=${id}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("test-title").value = data.title;
+                    questions = data.questions;
+                    renderQuestions();
+                });
+        };
+    </script>
+</head>
+<body>
+    <h1>Edit Test</h1>
+    <input type="text" id="test-title" placeholder="Test Title">
+    <div id="questions-container"></div>
+    <button onclick="submitTest()">Update Test</button>
+    <div class="back-link-button">
+        <button class="back-link-button" onclick="location.href='view_tests.html'">← Return to test list</button>
+    </div>
+</body>
+</html>

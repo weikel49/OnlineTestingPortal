@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard - Online Testing Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .test-list {
+            list-style: none;
+        }
+
+        .test-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #3498db;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 6px;
+        }
+
+        .test-item button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        .test-item button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link-button button {
+            max-width: 600px;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .back-link-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Select a Test to Begin</h2>
+    <ul class="test-list" id="testList">
+        <!-- Test options will be dynamically added here -->
+    </ul>
+
+    <div class="back-link-button">
+        <button onclick= "location.href='login.html'">← Logout</a>
+    </div>
+</div>
+
+<script>
+    fetch('/OnlineTestingPortal/available-tests')
+        .then(res => res.json())
+        .then(tests => {
+            const container = document.getElementById('testList');
+            container.innerHTML = '';
+            tests.forEach(test => {
+                const div = document.createElement('div');
+                div.className = 'test-item';
+                div.innerHTML = `
+                    <p><strong>${test.title}</strong></p>
+                    <button onclick="startTest(${test.id})">Start Test</button>
+                    <hr/>
+                `;
+                container.appendChild(div);
+            });
+        })
+        .catch(err => {
+            console.error("❌ Failed to load tests:", err);
+            document.getElementById('studentTestList').innerText = "Error loading tests.";
+        });
+
+    function startTest(testId) {
+        console.log(testId);
+        window.location.href = `take_test.html?id=${testId}`;
+    }
+</script>
+
+
+</body>
+</html>
