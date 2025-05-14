@@ -103,7 +103,7 @@ If you don’t have either installed, follow these steps:
 🧩 Step 3: Configure App Database Credentials
 -------------------------------
 
-1. In the OnlineTestingPortalPackage folder, navigate to:
+1. In the OnlineTestingPortal folder, navigate to:
    OnlineTestingPortal/WebContent/WEB-INF/classes/db.properties
 
 2. Right-click `db.properties` and choose **Open with > Notepad**
