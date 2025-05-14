@@ -2,9 +2,9 @@
 setlocal EnableDelayedExpansion
 
 REM === Set base paths ===
+set "JAVA_HOME=%~dp0jdk24"
+set "PATH=%JAVA_HOME%\bin;%PATH%"
 set "BASE_DIR=%~dp0"
-cd /d "%BASE_DIR%"
-
 set "SRC_DIR=%BASE_DIR%src"
 set "BIN_DIR=%BASE_DIR%bin"
 set "LIB_DIR=%BASE_DIR%lib"
